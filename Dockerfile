@@ -1,5 +1,9 @@
 FROM java:7
 COPY helloworld.java .
-RUN javac helloworld.java
-CMD ["java","helloworld"]
+RUN mkdir bin
+ 
+
+
+RUN javac-d bin  helloworld.java
+ENTRYPOINY ["java","cp","bin","helloworld"]
  
